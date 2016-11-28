@@ -7,3 +7,7 @@ from slackbot.bot import listen_to
 @respond_to('secbot', re.IGNORECASE)
 def hello_reply(message):
     message.reply('hello human!')
+
+@respond_to('teach me (.*)')
+def teachme(message, something):
+    message.reply('Here is {}'.format(something))
